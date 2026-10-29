@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>痕 · 世界观设定集</title>
+<style>
+:root{
+  --ink:#2b2622; --ink-soft:#5a524a; --paper:#f7f3ec; --paper-deep:#efe8dc;
+  --accent:#8c3f2b; --accent-soft:#b8694f; --line:#d8cfc0; --gold:#a8842c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family: Georgia, 'Times New Roman', 'Noto Serif SC', 'Source Han Serif SC', serif;
+  line-height: 2.05; font-size: 17.5px;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 28px 120px}
+.cover{
+  min-height:94vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;border-bottom:1px solid var(--line);
+}
+.cover .seal{
+  width:74px;height:74px;border:2px solid var(--accent);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:38px;color:var(--accent);font-weight:700;
+  margin-bottom:36px;transform:rotate(-3deg);
+  box-shadow:2px 2px 0 rgba(140,63,43,.18);
+}
+.cover h1{font-size:52px;letter-spacing:.35em;text-indent:.35em;font-weight:700;margin-bottom:18px}
+.cover .sub{color:var(--ink-soft);font-size:17px;letter-spacing:.2em;margin-bottom:8px}
+.cover .quote{
+  margin-top:44px;max-width:520px;color:var(--ink-soft);font-size:15.5px;
+  border-left:3px solid var(--accent);padding-left:18px;text-align:left;line-height:2.1;
+}
+.cover .meta{margin-top:44px;color:var(--ink-soft);font-size:13.5px;letter-spacing:.12em;line-height:2.1}
+.toc{padding:64px 0;border-bottom:1px solid var(--line)}
+.toc h2{font-size:15px;letter-spacing:.4em;color:var(--accent);margin-bottom:28px;text-align:center}
+.toc ol{list-style:none;columns:2;column-gap:48px}
+.toc li{margin-bottom:10px;break-inside:avoid}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--line);padding-bottom:2px;font-size:15.5px}
+.toc a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.toc .n{color:var(--gold);margin-right:8px;font-size:13px}
+section{padding:72px 0 8px}
+.kicker{font-size:13px;letter-spacing:.45em;color:var(--accent);margin-bottom:14px}
+h2{font-size:30px;font-weight:700;margin-bottom:26px;letter-spacing:.06em}
+h2 .en{display:block;font-size:12.5px;color:var(--ink-soft);letter-spacing:.25em;margin-top:10px;font-weight:400}
+p{margin:16px 0;text-align:justify}
+strong{color:var(--accent);font-weight:700}
+em{color:var(--ink-soft)}
+.pull{
+  margin:32px 0;padding:24px 30px;background:var(--paper-deep);
+  border-left:4px solid var(--gold);font-size:19px;line-height:2;
+}
+blockquote{
+  margin:24px 0;padding:18px 26px;border-left:3px solid var(--line);
+  color:var(--ink-soft);font-size:16px;
+}
+blockquote p{margin:6px 0}
+ul,ol{margin:14px 0 14px 26px}
+li{margin:8px 0}
+hr{border:none;border-top:1px solid var(--line);margin:56px 0 0}
+.note{
+  margin:28px 0;padding:20px 26px;background:var(--paper-deep);
+  border:1px dashed var(--line);font-size:15px;color:var(--ink-soft);line-height:2;
+}
+.note .tag{color:var(--accent);font-size:12.5px;letter-spacing:.3em;display:block;margin-bottom:8px}
+footer{margin-top:90px;padding-top:36px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13.5px;line-height:2;text-align:center}
+footer .ftr-seal{color:var(--accent);font-size:22px;letter-spacing:.3em;margin-bottom:12px}
+.toplink{display:inline-block;margin-top:40px;font-size:13px;color:var(--accent);text-decoration:none;letter-spacing:.2em}
+.toplink:hover{text-decoration:underline}
+@media(max-width:640px){
+  .cover h1{font-size:36px}
+  .toc ol{columns:1}
+  body{font-size:16px}
+  h2{font-size:25px}
+}
+@media print{
+  .toplink{display:none}
+  .cover{min-height:auto;padding:60px 0}
+}
+</style>
+</head>
+<body id="top">
+
+<div class="wrap">
+
+<header class="cover">
+  <div class="seal">痕</div>
+  <h1>痕</h1>
+  <div class="sub">世 界 观 设 定 集</div>
+  <div class="quote">
+    以下文字，辑自一位行脚者留下的笔记。<br>
+    他走过很多地方，听过很多说法，抄过很多没人看的旧档。<br>
+    他自称不站任何一边——但读过的人都说，他抄什么、不抄什么，本身就是一种说法。
+  </div>
+  <div class="meta">
+    小说 + 轻量文本游戏 · 共用世界观
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目 录</h2>
+  <ol>
+    <li><span class="n">序</span><a href="#prologue">他为什么要抄这些</a></li>
+    <li><span class="n">壹</span><a href="#ch1">山记得事</a></li>
+    <li><span class="n">贰</span><a href="#ch2">力气是借来的</a></li>
+    <li><span class="n">叁</span><a href="#ch3">六层水</a></li>
+    <li><span class="n">肆</span><a href="#ch4">帝国不烧书</a></li>
+    <li><span class="n">伍</span><a href="#ch5">守庙的人</a></li>
+    <li><span class="n">陆</span><a href="#ch6">香火</a></li>
+    <li><span class="n">柒</span><a href="#ch7">我进去过</a></li>
+    <li><span class="n">捌</span><a href="#ch8">越往里，越不能信</a></li>
+    <li><span class="n">玖</span><a href="#ch9">深处的小人物</a></li>
+    <li><span class="n">拾</span><a href="#ch10">断香火的地方</a></li>
+    <li><span class="n">拾壹</span><a href="#ch11">第一奇观</a></li>
+    <li><span class="n">拾贰</span><a href="#ch12">那句话</a></li>
+    <li><span class="n">拾叁</span><a href="#ch13">两个走在前头的人</a></li>
+    <li><span class="n">末</span><a href="#end">我为什么不写了</a></li>
+    <li><span class="n">附</span><a href="#appendix">给读这份设定集的人</a></li>
+  </ol>
+</nav>
+
+<section id="prologue">
+  <div class="kicker">序</div>
+  <h2>他为什么要抄这些</h2>
+  <p>我抄这些，是因为我发现了一件事。</p>
+  <p>每个地方都有故事。山里的、庙里的、说书人嘴里的、官府文书里的。同一个地方，故事能讲出十几种，细节处处对不上——哪年发的水，死了多少人，救人的是谁，连那山叫什么名都有三四种叫法。</p>
+  <p>我以前以为，故事就是这样，传着传着就走样了。</p>
+  <p>后来我发现不对。那些故事处处不同，可有一样东西，处处相同。</p>
+  <p>我现在先不说那是什么。你得先跟我走一遍，自己看出来。</p>
+</section>
+
+<section id="ch1">
+  <div class="kicker">壹</div>
+  <h2>山记得事</h2>
+  <p>先说一件人人都知道、却没人人当真的事：山记得事。</p>
+  <p>老人说「山认得人」。不是客气话。你在一座山下住一辈子，山就认得你；你路过一次，山也认得你，只是认得浅。这话各地都有，说法不一样——有的地方说「老爷山记着账」，有的地方说「石头不聋」——但意思是同一个。</p>
+  <p>我起先当它是乡野的比方。直到我在南边一座废庙里，亲眼见了一回。</p>
+  <p>那庙断了香火很多年，墙塌了半边。我在里头躲雨，靠着墙坐了一夜。那一夜我做了个梦，又不像梦——我成了另一个人，一个我不认识的人，在一场大雨里跑，怀里抱着什么东西，怕得要死。醒来的时候雨停了，我脸上全是泪，可那不是我的怕，也不是我的泪。</p>
+  <p>后来我打听过。那庙很多年前塌过一次，塌的那夜也是大雨，有个守庙的抱着庙里的牌位往外跑，没跑出去。</p>
+  <p>我不解释这件事。我只把它记下来。你往后看，这样的事不止一桩。</p>
+</section>
+
+<section id="ch2">
+  <div class="kicker">贰</div>
+  <h2>力气是借来的</h2>
+  <p>这世上有一种人，力气大得没道理。</p>
+  <p>不是练出来的。我见过一个挑夫，瘦得像柴，可在他们那座山的范围里，他一个人能扛起整根的房梁。出了那山的地界，走个十天，他就和寻常挑夫没两样了。</p>
+  <p>力气是借来的。跟谁借？跟地方借。</p>
+  <p>每个地方都压着一股力。那场大水、那场火、那年饿死的人——那些事没有过去，它们压在地底下，压在石头里。住得够久、懂得够多的人，能把这股力接到自己身上一点。</p>
+  <p>接多少，看两样东西。</p>
+  <p><strong>一看你站在哪。</strong>离了那片地方，力就接不上了，一天弱过一天。所以真正的强者都不肯走远——不是不想，是不能。</p>
+  <p><strong>二看你懂多少。</strong>懂，是靠故事懂的。每个地方的故事，讲的其实就是那股力是什么、该怎么接。故事讲得越全，你接得越多。</p>
+  <p>这里有个要命的地方，我很多年才想明白：</p>
+  <div class="pull">市面上流传的故事，都是讲不全的。</div>
+  <p>你照着说书人那一套去悟，悟到三四成，就再也上不去了。不是你不努力——是那个故事本身就讲到那儿。后头的，它没有了。</p>
+  <p>那后头的在谁手里？你往后看。</p>
+</section>
+
+<section id="ch3">
+  <div class="kicker">叁</div>
+  <h2>六层水</h2>
+  <p>接力的深浅，行里有个说法，拿水作比。</p>
+  <p>刚沾着的，叫<strong>微澜</strong>——静水上一点皱，沾一下就散。</p>
+  <p>再深，<strong>暗涌</strong>——底下有东西了，翻得上来，站得住。</p>
+  <p>再深，<strong>潮信</strong>——那一片地方的力都动起来，天、地、声音，都随你。寻常人练到死，就到这一层。说书的说某人「能呼风唤雨」，多半就是个潮信，听着吓人，其实也就三四成。</p>
+  <p>往上是<strong>惊涛</strong>、<strong>沧海</strong>——到了这两层的，我一辈子只远远见过一个。那不是打架，那是整片天地压下来，你不是在跟一个人打，你是在那场几百年前的水里打。</p>
+  <p>最高的一层，叫<strong>归墟</strong>。众水所归，其下无底。我只在旧档里见过这个词，没见过活人。</p>
+  <p>归墟之上，旧档里还提过一个称呼。不是境界，是个职名——<strong>看管人</strong>。那一页就这三个字，前后都被撕了。</p>
+  <p>撕档案的人想瞒什么，我不知道。我把这三个字抄下来，是因为我后来在第一奇观的山下，听一个守夜的老人，梦里喊出了这三个字。</p>
+</section>
+
+<section id="ch4">
+  <div class="kicker">肆</div>
+  <h2>帝国不烧书</h2>
+  <p>我年轻时以为，朝廷瞒真相，靠的是烧书。</p>
+  <p>错了。朝廷一本书都不烧。</p>
+  <p>不但不烧，还放任。各地的神话、野史、秘传，爱怎么传怎么传，爱怎么编怎么编。市面上故事泛滥成灾，真真假假，谁也分不清。</p>
+  <p>我很多年后才懂这里头的狠处。</p>
+  <div class="pull">让你找不到真相的最好办法，不是把真相收走，是把你埋进一万个版本里。</div>
+  <p>你比对一百个版本，发现它们处处不同，于是你以为真相藏在差异里，一处一处去对——</p>
+  <p>对不出来的。我试过，对了七年。</p>
+  <p>真正的东西，不在它们不同的地方。在它们<strong>相同</strong>的地方。那一百个版本里，有一样东西，一个字都不差。</p>
+  <p>是什么，我还是先不说。你快看到了。</p>
+</section>
+
+<section id="ch5">
+  <div class="kicker">伍</div>
+  <h2>守庙的人</h2>
+  <p>力气最大的人在哪？在奇观边上。</p>
+  <p>那些最老、最大的地方，都有人世世代代守着。守得越久，接得越深。贵族不是血统，是<strong>泡在那里的年头</strong>——你打生下来就住在那山下，你接的力，比别人半路出家的深得多。</p>
+  <p>理论上，这力气人人可得。实际上，你到不了那地方。</p>
+  <p>这就是这个世道最结实的一堵墙：好地方都被人占着，占着的人越占越强，越强越占得稳。</p>
+  <p>朝廷占的不是每一处。它占大的。大奇观罩着一片地，地里的小奇观、小庙、小山头，连带全归它管。所以它不用处处派兵，它只要攥着那几个最大的就行。</p>
+  <p>攥着，还不全是为了力气。你往下看。</p>
+</section>
+
+<section id="ch6">
+  <div class="kicker">陆</div>
+  <h2>香火</h2>
+  <p>朝廷的人要出远门，怎么办？离了地盘，力不就断了？</p>
+  <p>他们有东西带。</p>
+  <p>我见过一个押粮的官，腰间挂着一面旧铜镜，黑沉沉的，照不出人影。他离了本地三千里，力气一分不少。</p>
+  <p>那镜子，是在他们那处大奇观底下，受了几十年香火的东西。几十年的祭拜，把一股情绪压进了器物里——那镜子就成了一小块「地方」，走到哪，带到哪。</p>
+  <p>官面上，这东西叫<strong>敕器</strong>，有编号，有存档，定期要回去补祭。民间叫<strong>香火</strong>——「他是带着香火走的」。</p>
+  <p>这里头有两处你要留心：</p>
+  <p>一是这东西<strong>会褪</strong>。断了祭拜，它就一天天淡下去，最后成一块凡铁。所以带着敕器的人，迟早得回去补祭。这是朝廷手里最漂亮的一根绳子——放你走得再远，你也得回来。</p>
+  <p>二是这东西<strong>只会一招</strong>。几十年的祭拜，压进去的是同一种情绪、同一个念头，翻来覆去几万遍。所以朝廷的兵，招式是死的。你跟一个带兵器的交手，看清他第一招，就知道他第一百招是什么样。</p>
+  <p>他们的力是朝廷发的故事。故事里没有什么人，他们就使不出什么。</p>
+  <p>有一回，我和一个朝廷的校尉交手。他使到一半，招式里忽然空了一下——像一段戏里，该有个人出场，却没出来。他自己都没察觉。</p>
+  <p>我后来查到了。他使的那一路力，出自两百年前一场守城战。朝廷发的版本里，删掉了一个人。删了，就使不出来了。</p>
+  <div class="pull">被删掉的人，力气还记得。</div>
+</section>
+
+<section id="ch7">
+  <div class="kicker">柒</div>
+  <h2>我进去过</h2>
+  <p>现在说回我在废庙里遇到的事。</p>
+  <p>那不是梦。我后来又能进去了，进了很多次，进了很多地方。</p>
+  <p>每一处老地方，里头都沉着东西。不是鬼，不是神，是<strong>那一刻</strong>——某个人情绪最烈的那一刻，连同那一刻前后的一段日子，沉在里头，几百年不散。</p>
+  <p>我管那叫<strong>痕</strong>。我没有更好的词。我看见的就是：这里有痕迹。</p>
+  <p>进去是什么样的？不是看戏。<strong>你成了他。</strong>你从他的眼睛里看出去，用他的身子经历那段日子。他怕，你就怕；他疯，那十息里你就是疯的，你连「这可能是假的」都想不起来。</p>
+  <p>他没看过的地方，对你就没有——那不是风景缺了一块，是那段记录就到那儿。走出去了，你就出来了。</p>
+  <p>带得出来的只有一样：记忆。而那是<strong>他的</strong>记忆。你分不清哪一段是你自己的。</p>
+  <p>这就是代价。出来以后，那份不属于你的怕、不属于你的愧、不属于你的恨，会留在你身上，慢慢改你。它去不掉——我试遍了法子，去不掉。只有一个法子能轻一点：<strong>讲给另一个人听。</strong>听的人，替你分走一半。</p>
+  <p>所以进痕的人，身边不能没有人。这话你记住，后头有用。</p>
+  <p>还有一条更要命的：<strong>你进去的时候，身子留在外头。</strong>外头只剩一个不会动的你。要是没人守着，身子叫人毁了、搬走了，你就回不来了——你就留在那道痕里，成了那段记忆里的一部分。</p>
+  <p>每一处老地方的深处，都沉着这样几个人。进得去、没出来的。</p>
+</section>
+
+<section id="ch8">
+  <div class="kicker">捌</div>
+  <h2>越往里，越不能信</h2>
+  <p>一处地方，沉着的痕不止一道，是一串。</p>
+  <p>最外头，是听说过这地方的人、几百年后来烧香的人——他们的痕浅、短，但干净。</p>
+  <p>往里，是住得近的、路过的。</p>
+  <p>再往里，是亲眼看见的。</p>
+  <p>再往里，是当年就在场的人——救人的、逃跑的、下令的。</p>
+  <p>最里头，是惹出这件事的人，和<strong>第一个把这件事讲出来的人</strong>。</p>
+  <p>我起先以为，越往里越真。错了。</p>
+  <div class="pull">越往里，情绪越烈；情绪越烈，记得越偏。</div>
+  <p>外头的人知道得少，可他们没被扭过；最里头的人知道得最多，可他被自己的怕、自己的愧、自己的疯，扭得不成样子。</p>
+  <p>最深的那个人，是最有用的，也是最不能信的。</p>
+  <p>所以一个人进痕，是看不全的。得带人。一人占一环，远的给你骨架，近的给你血肉。只带一个看最里头，他能把你骗到底——他不是成心的，他是真的记得就是那样。</p>
+  <p>我带过的人，出来以后吵过架。同一段日子，五个人带进五种记忆，每个人都咬定自己亲眼所见。他们吵的不是看法，是「刚才我明明在场」。</p>
+  <p>还有人瞒。看见了的，不说。</p>
+  <p>我不怪他们。有些记忆，你分不清是自己的还是别人的，你就不敢认。</p>
+</section>
+
+<section id="ch9">
+  <div class="kicker">玖</div>
+  <h2>深处的小人物</h2>
+  <p>最里头的痕，多半是谁的？</p>
+  <p>是守观人的，是贵族的。他们在那地方泡了几辈子，情绪最烈，沉得最深。</p>
+  <p>所以每一处老地方的深处，坐满的都是他们的人。<strong>往深处去，不是进宝库，是进人家的家。</strong></p>
+  <p>但有一种人例外。</p>
+  <p>守夜的、抄书的、做饭的——他们在最深的地方，情绪却淡。他们的痕，浅、长、干净，位置却深得不能再深。</p>
+  <p>朝廷防的是强者，不防他们。</p>
+  <p>我这一路上最要紧的几段，都是从这样的人的痕里看来的。一个抄了三十年经的老吏，他自己都不知道，他替我守着多少东西。</p>
+</section>
+
+<section id="ch10">
+  <div class="kicker">拾</div>
+  <h2>断香火的地方</h2>
+  <p>朝廷也不光是占着。它还在做一件事，这件事我说得小心一点。</p>
+  <p>祭拜，是往那地方持续地灌同一种情绪。年复一年，那情绪就在旧痕上压出新痕——又厚又响，把旧的盖住。</p>
+  <p>所以香火旺了几百年的大庙，深处的东西，你看着要当心。那最响、最亮、最齐整的，未必是最真的。灌出来的痕，均匀、响亮、没有细节；真的痕，粗糙、不对称、有闲笔。</p>
+  <p>要找真的，去断了香火的地方。废都、迁走的旧城、塌了的野庙、打过仗的地界。压上去的痕，断了供会褪、会剥落，旧的就露出来了。</p>
+  <p>但有一样它盖不住：<strong>深处。</strong>祭拜灌的是表层。要给最深处压痕，得让全天下的眼睛一起压在那儿——做不到。</p>
+  <p>还有一样它盖不住：<strong>地形。</strong>河还是那条河，山口还是那个朝向。痕里看见的，拿到外头对——河在不在、山朝哪边、岩壁的影子什么时辰砸下来。</p>
+  <p>地对得上，才是真的。<strong>地是没法改的那一半。</strong></p>
+  <p>所以朝廷真正防的，不是抄书的人，是<strong>改图的人</strong>。这些年府县的舆图换了好几版，地名改了一批又一批，界碑挪了一处又一处。删对照的东西，比禁书便宜，也不惹眼。</p>
+</section>
+
+<section id="ch11">
+  <div class="kicker">拾壹</div>
+  <h2>第一奇观</h2>
+  <p>所有的老地方里，有一处最老。</p>
+  <p>老到什么程度？老到这世上所有「认了主」的地方，认主的规矩都是从它那儿来的。它是头一个。</p>
+  <p>按理说，这样的地方该是天底下顶顶要紧的兵家必争之地。</p>
+  <p>可没人碰它。谁都不碰。朝廷不碰，群雄不碰，连最疯的叛军都不碰。</p>
+  <p>我问过为什么。没人答得上来，或者说，没人敢答。只说：动不得。动了，就全乱了——<strong>所有地方的归属，都是从它那儿来的；它一动，所有的归属一起动摇。</strong></p>
+  <p>所以它成了一份谁都没签过、却人人都守着的公约。</p>
+  <p>而朝廷的正当，就来自这儿：<strong>它替所有人看着这处地方。</strong>它不是占着，是看着。这个分别，一字之差，是朝廷几百年根基所在。</p>
+  <p>我在那山下住过半年。山上的守观人，世代不换。有个守夜的老人，就是我在「六层水」那节提过的那个——他梦里喊「看管人」。</p>
+  <p>他还说过一句梦话，我一直记着：</p>
+  <blockquote>
+    <p>「这些苦，总得有人担着。」</p>
+  </blockquote>
+  <p>他说这话的时候，不像是恶人。像是真的信。</p>
+</section>
+
+<section id="ch12">
+  <div class="kicker">拾贰</div>
+  <h2>那句话</h2>
+  <p>现在，我可以把开头藏着的东西说出来了。</p>
+  <p>我比对过一百多个版本。官的、民的、野史的、骗子卖的秘传。它们处处不同，只有一处，一个字不差。</p>
+  <p>每一个版本里，都有一句讲「这地方属于谁」的话。</p>
+  <p>填的名字不一样——官版填的是朝廷，民版填的是神，野史填的是某个亡了的国，秘传填的是「你，只要你出得起钱」。几百年来，所有人吵的都是这个填空。</p>
+  <p><strong>可那句话的架子，从来没人碰过。</strong>一个地方，当然属于谁。这太自然了，自然到没人会问。</p>
+  <p>我起初也只想争填空。直到有一回，我在第一奇观最深处，进了那道最老、最窄、最深的痕——</p>
+  <p>我在那儿看到了这句话第一次被说出口的情形。</p>
+  <p>我看到的东西，我不全写在这里。我只写一句：</p>
+  <div class="pull">那句话，头一回被说出口的时候，末尾不是句号。</div>
+  <p>其余的，你自己去想。想通了，你就明白这世道的锁在哪；也就明白，那把钥匙是什么形状。</p>
+</section>
+
+<section id="ch13">
+  <div class="kicker">拾叁</div>
+  <h2>两个走在前头的人</h2>
+  <p>我不是第一个能进痕的。</p>
+  <p>旧档里有过一个名字，或者说，有过一个称呼——<strong>借身</strong>。那是一份处置预案，记的是「若有此人，当如何」。那份档案没有下文，停在一处，像是记到一半，记的人出了事。</p>
+  <p>我拼了很多年，拼出一个大概：</p>
+  <p>很久以前，第一奇观那里出过一场大灾。当场有一个外来的人——和我一样，从不存在这套规矩的地方来。因为没在这世道的册子上登记过，所以锁管不着他，他也进得去痕。</p>
+  <p>他进去了，看到了，然后在里头，说出了那句话。</p>
+  <p><strong>他没出来。</strong>外头没人守他的身子。</p>
+  <p>他留在里头了。他留下的，是一句没人接的话。</p>
+  <p>后来，一个活下来的守观人，需要一个说法。他替那个死人，把那句话接了下去。</p>
+  <p>——就接到这里。后头的事，就是这几百年的世道了。</p>
+  <p>我把这两个人的事记下来，是给往后的人留两面镜子：</p>
+  <p>一面照见：<strong>你也会死。</strong>他缺的只有一样——外头一个守着他的人。</p>
+  <p>一面照见：<strong>你可以替他们答。</strong>这是诱惑。那个守观人不是坏人，他只是替一个死人把话说完了。他真心信，那就是死者的意思。</p>
+  <p>至于我——</p>
+  <p>我进痕这些年，身上沉着十几份不属于我的情绪。它们改了我。我有时候分不清，我想做成的那件事，到底是我要做的，还是哪一份残留推着我做的。</p>
+  <p>但有一样我拿得定：那句话，我不接。</p>
+  <div class="pull">上一个问的人死了，上一个答的人立了教。这一回，得有人把那个空，留着。</div>
+</section>
+
+<section id="end">
+  <div class="kicker">末</div>
+  <h2>我为什么不写了</h2>
+  <p>笔记到这里为止。</p>
+  <p>后头的事，要么还没发生，要么——发生了，就不能再由我来写。</p>
+  <p>我只是一个抄东西的人。我抄这些，不是为了让你们知道真相。真相这东西，由一个人嘴里说出来，就又是一个版本，又成了别人的枷锁。</p>
+  <p>我抄这些，是想让你们自己去看。河还在，山口还在，石头还记着。那些东西，谁也收不走。</p>
+  <p>哪天你走到一处老地方，坐下来，安静地待一会儿。</p>
+  <p>要是你听见什么——别急着信，也别急着不信。</p>
+  <p>先问问自己：这一段，是谁记下的？他想让我看见什么？</p>
+  <p>——还有，那句话，你打算怎么接？</p>
+</section>
+
+<section id="appendix">
+  <div class="kicker">附</div>
+  <h2>给读这份设定集的人</h2>
+  <div class="note">
+    <span class="tag">编 者 注</span>
+    <p>以上是一份「世界内」的设定集：全部设定都由世界内部的眼睛看来、嘴讲出，机制化进了传说、行话与亲历。核心谜底——那句话的原貌、两个前任的真相、结局的走向——全部留白，只埋缝隙。</p>
+    <p>它背后有一套完整的设计文档库支撑，共七份，记录了这个世界观从骨架到血肉的全部推演与取舍。</p>
+    <p><strong>这个项目是「小说 + 轻量文本游戏」共用的世界观。</strong>游戏不依附小说剧情，只借设定：单局三五分钟，进一处地方的一环，看一段情绪，判断真假。</p>
+  </div>
+  <a class="toplink" href="#top">↑ 回到卷首</a>
+</section>
+
+<footer>
+  <div class="ftr-seal">痕</div>
+  <p>《痕 · 世界观设定集》<br>小说 + 轻量文本游戏 · 共用世界观<br>辑自一位行脚者的笔记</p>
+</footer>
+
+</div>
+
+</body>
+</html>
